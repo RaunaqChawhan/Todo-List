@@ -15,6 +15,7 @@ function createTask(task) {
 	para.textContent = task;
 	taskContainer.appendChild(para);
 	todos.appendChild(taskContainer);
+	
 	const deleteButton = document.createElement('button');
 	deleteButton.innerHTML = 'Delete';
 	deleteButton.setAttribute('class', 'delete-task');
@@ -22,6 +23,14 @@ function createTask(task) {
 	deleteButton.addEventListener('click', function (e) {
 		deleteTask(e);
 	});
+	
+	const editButton = document.createElement('button');
+ 	editButton.innerHTML = 'Edit';
+ 	editButton.setAttribute('class', 'edit-task');
+ 	taskContainer.appendChild(editButton);
+ 	editButton.addEventListener('click', function (e) {
+ 		editTask(e);
+ 	});
 }
 
 function deleteTask(e) {
@@ -30,6 +39,21 @@ function deleteTask(e) {
 	const parentElement = selectedButton.parentNode;
 	const parentContainer = parentElement.parentNode;
 	parentContainer.removeChild(parentElement);
+}
+
+function editTask(e) {
+	console.log('in edit');
+	const selectedButton = e.target;
+	console.log(selectedButton);
+	const parentElement = selectedButton.parentNode;
+	console.log(parentElement);
+	const firstPara = parentElement.firstChild;
+	console.log(firstPara);
+	const inputElement = document.createElement('input');
+	inputElement.setAttribute('type', 'text');
+	inputElement.value = firstPara.innerHTML;
+	parentElement.replaceChild(inputElement, firstPara);
+	inputElement.focus();
 }
 
 
