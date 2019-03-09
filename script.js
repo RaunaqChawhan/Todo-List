@@ -49,11 +49,25 @@ function editTask(e) {
 	console.log(parentElement);
 	const firstPara = parentElement.firstChild;
 	console.log(firstPara);
+	const formElement = document.createElement('form');
 	const inputElement = document.createElement('input');
 	inputElement.setAttribute('type', 'text');
 	inputElement.value = firstPara.innerHTML;
-	parentElement.replaceChild(inputElement, firstPara);
+	formElement.appendChild(inputElement);
+	parentElement.replaceChild(formElement, firstPara);
 	inputElement.focus();
+	console.log(formElement);
+	formElement.addEventListener('submit', function (e) {
+		e.preventDefault();
+		const clickedButton = e.target;
+		console.log(clickedButton);
+		const parent = clickedButton.parentNode;
+		console.log(parent);
+		const newPara = document.createElement('p');
+		newPara.innerHTML = inputElement.value;
+		console.log(newPara);
+		parent.replaceChild(newPara, formElement);
+	});
 }
 
 
