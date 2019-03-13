@@ -20,18 +20,26 @@ function createTask(task) {
 	deleteButton.innerHTML = 'Delete';
 	deleteButton.setAttribute('class', 'delete-task');
 	taskContainer.appendChild(deleteButton);
-	deleteButton.addEventListener('click', function (e) {
+	/*deleteButton.addEventListener('click', function (e) {
 		deleteTask(e);
-	});
+	});*/
 	
 	const editButton = document.createElement('button');
  	editButton.innerHTML = 'Edit';
  	editButton.setAttribute('class', 'edit-task');
  	taskContainer.appendChild(editButton);
- 	editButton.addEventListener('click', function (e) {
+ 	/*editButton.addEventListener('click', function (e) {
  		editTask(e);
- 	});
+ 	});*/
 }
+
+todos.addEventListener('click', function(e) {
+	if(e.target.classList == "delete-task") {
+		deleteTask(e);
+	} else if(e.target.classList == "edit-task") {
+		editTask(e);
+	}
+});
 
 function deleteTask(e) {
 	console.log('in delete');
