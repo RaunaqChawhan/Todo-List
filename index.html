@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 	<head>
 		<meta charset="utf-8">
-		<title>ToDo App</title>
+		<title>To-do list</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
 		<div class="container">
-			<div class="main-header">
-				<h2>ToDo WebApp</h2>
-			</div>
-			<div class="todos"></div>
-			<form class="task-form">
-				<div class="task-header">
-					<label for="task-value">+ New Task</label>
-				</div>
-				<input type="text" id="task-value">
+			<h1>To-do List</h1>
+			<ul class="todos"></ul>
+			<form id="add-form">
+				<input type="text" id="task" required autocomplete="off" autofocus>
+				<label for="task">New</label>
 			</form>
 		</div>
 		<script src="script.js"></script>
 	</body>
-
+  
 </html>
