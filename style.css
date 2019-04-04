@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:700,700i');
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	background: #26ca92;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+.container {
+	width: 500px;
+	text-align: center;
+	margin: 80px auto;
+	background: #ffffff;
+	/*border: 1px solid;*/
+	border-radius: 8px;
+	padding: 10px;
+	font-family: 'Space Mono', monospace;
+	overflow: hidden;
+}
+
+.container h1 {
+	font-style: italic;
+	letter-spacing: 3px;
+	margin: 25px 10px;
+}
+
+.todos {
+	list-style-type: none;
+	padding: 0;
+	text-align: left;
+	/*border: 1px solid;*/
+}
+
+.todos li {
+	position: relative;
+	padding: 20px;
+	margin-top: 5px;
+	border-bottom: 1px solid grey;
+
+}
+
+.todos li:hover {
+	background: skyblue;
+}
+
+.delete-button {
+	position: absolute;
+	right: 17%;
+	/*top: -20px;*/
+	border: 1px solid #9361bf;
+	background: #9361bf;
+	padding: 6px 14px;
+	font-size: 14px;
+	font-family: 'Space Mono', monospace;
+    border-radius: 4px;
+    cursor: pointer;
+    /*margin: 20px 0;*/
+    /*border-left: 0;*/
+    color: white;
+}
+
+.edit-button {
+	position: absolute;
+	right: 2%;
+	border: 1px solid #9361bf;
+	background: #9361bf;
+	padding: 6px 14px;
+	font-size: 14px;
+	font-family: 'Space Mono', monospace;
+    border-radius: 4px;
+    cursor: pointer;
+    /*margin: 20px 0;*/
+    /*border-left: 0;*/
+    color: white;
+}
+
+#add-form input {
+	border: 1px solid;
+	padding: 10px;
+	border-radius: 100px;
+	outline: none;
+	font-family: 'Space Mono', monospace;
+}

@@ -16,7 +16,7 @@ function addItem(e) {
 function populateList(items, tasksList) {
 	//console.log('in populateList', items);
 	while(tasksList.querySelector('li') != null) {	/*Empty the list first otherwise it will lead to repeated elements getting
-										created because looping thorugh an array is done everytime populateList is called*/
+									created because looping thorugh an array is done everytime populateList is called*/
  		//console.log('removed list');
 		tasksList.removeChild(tasksList.querySelector('li'));
 	}
